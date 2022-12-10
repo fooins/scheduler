@@ -5,8 +5,8 @@ const { getNotifyTaskModel } = require('../../models');
  * 查询待处理的通知任务
  * @returns {array} 待处理的通知任务
  */
-const queryPendingTasks = async () => {
-  return getNotifyTaskModel().findAll({
+const queryPendingTasks = async () =>
+  getNotifyTaskModel().findAll({
     attributes: ['id'],
     where: {
       [Op.or]: [
@@ -24,7 +24,6 @@ const queryPendingTasks = async () => {
     order: [['id', 'ASC']],
     limit: 1000,
   });
-};
 
 /**
  * 开始处理任务
