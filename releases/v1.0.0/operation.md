@@ -5,7 +5,7 @@
 
 ## 1. 部署
 
-1. 清理废弃的作业程序 `DELETE FROM jobs WHERE name="autoCompensate";`;
+1. 清理废弃的作业程序 `DELETE FROM jobs WHERE name="autoCompensate";`。
 
 2. 设备初始化：
 
