@@ -11,6 +11,7 @@ module.exports = async () => {
   // 发布到队列
   for (let i = 0; i < tasks.length; i += 1) {
     const { id } = tasks[i];
+    // eslint-disable-next-line no-await-in-loop
     await getRedis().xadd(
       'notification', // 队列名
       '*', // 表示由系统生成消息ID
